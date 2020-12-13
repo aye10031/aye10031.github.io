@@ -2,7 +2,7 @@ os: linux
 language: node_js 
 sudo: true
 node_js:
-  - 10  # 使用 nodejs LTS v10
+  - 12  # 使用 nodejs LTS v12
 branches:
   only:
     - source # 只监控 source 的 branch
