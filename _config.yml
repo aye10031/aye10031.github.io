@@ -1,10 +1,10 @@
-title: Hexo
-subtitle: ''
-description: ''
+title: 鸽子窝~
+subtitle: '快跑，有二次元！'
+description: '以下全是我瞎写的'
 keywords: null
-author: John Doe
-language: en
-timezone: ''
+author: Aye10032
+language: zh-CN
+timezone: 'Asia/Shanghai'
 url: 'http://example.com'
 root: /
 permalink: ':year/:month/:day/:title/'
@@ -38,7 +38,7 @@ highlight:
   auto_detect: false
   tab_replace: ''
   wrap: true
-  hljs: false
+  hljs: true
 prismjs:
   enable: false
   preprocess: true
