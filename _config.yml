@@ -63,6 +63,3 @@ ignore: null
 theme: icarus
 deploy:
   type: git
-  repo: https://github.com/aye10031/aye10031.github.io.git
-  branch: master
-  message: {{ now('YYYY-MM-DD HH:mm:ss') }}
