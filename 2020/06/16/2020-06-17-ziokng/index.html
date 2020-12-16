@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>自动控制复习 - 鸽子窝~</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="鸽子窝~"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="鸽子窝~"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta description="一、知识点 衡量或评价控制系统优劣的三个方面  稳定性 快速性 准确性   自动控制系统的基本控制方式可以分为哪些  开环控制 闭环控制   线性定常离散控制系统的稳定性，除了与系统的结构参数有关之外，还与什么因素有关  采样周期   根轨迹上的点应该同时满足什么条件  相角条件 幅值条件   根轨迹起始于什么，终止于什么  起始于开环极点  终止于开环零点    线性连续系统的稳态误差，除了"><meta property="og:type" content="blog"><meta property="og:title" content="自动控制复习"><meta property="og:url" content="http://example.com/2020/06/16/2020-06-17-ziokng/"><meta property="og:site_name" content="鸽子窝~"><meta property="og:description" content="一、知识点 衡量或评价控制系统优劣的三个方面  稳定性 快速性 准确性   自动控制系统的基本控制方式可以分为哪些  开环控制 闭环控制   线性定常离散控制系统的稳定性，除了与系统的结构参数有关之外，还与什么因素有关  采样周期   根轨迹上的点应该同时满足什么条件  相角条件 幅值条件   根轨迹起始于什么，终止于什么  起始于开环极点  终止于开环零点    线性连续系统的稳态误差，除了"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://example.com/images/posts/zikong/IMG_20200621_0001.jpg"><meta property="article:published_time" content="2020-06-16T16:00:00.000Z"><meta property="article:modified_time" content="2020-12-16T13:14:51.749Z"><meta property="article:author" content="Aye10032"><meta property="article:tag" content="学习"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/images/posts/zikong/IMG_20200621_0001.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2020/06/16/2020-06-17-ziokng/"},"headline":"鸽子窝~","image":["http://example.com/images/posts/zikong/IMG_20200621_0001.jpg"],"datePublished":"2020-06-16T16:00:00.000Z","dateModified":"2020-12-16T13:14:51.749Z","author":{"@type":"Person","name":"Aye10032"},"description":"一、知识点 衡量或评价控制系统优劣的三个方面  稳定性 快速性 准确性   自动控制系统的基本控制方式可以分为哪些  开环控制 闭环控制   线性定常离散控制系统的稳定性，除了与系统的结构参数有关之外，还与什么因素有关  采样周期   根轨迹上的点应该同时满足什么条件  相角条件 幅值条件   根轨迹起始于什么，终止于什么  起始于开环极点  终止于开环零点    线性连续系统的稳态误差，除了"}</script><link rel="canonical" href="http://example.com/2020/06/16/2020-06-17-ziokng/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.2.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="鸽子窝~" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-06-16T16:00:00.000Z" title="2020-06-16T16:00:00.000Z">2020-06-17</time>发表</span><span class="level-item"><time dateTime="2020-12-16T13:14:51.749Z" title="2020-12-16T13:14:51.749Z">2020-12-16</time>更新</span><span class="level-item">17 分钟读完 (大约2518个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">自动控制复习</h1><div class="content"><iframe style="min-width: 500px;min-height: 300px"   src="https://www.acfun.cn/player/ac15160511" id="ACPlayer-re"  scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
+<h1 id="一、知识点"><a href="#一、知识点" class="headerlink" title="一、知识点"></a>一、知识点</h1><ol>
+<li><p><strong>衡量或评价控制系统优劣的三个方面</strong></p>
+<ul>
+<li>稳定性</li>
+<li>快速性</li>
+<li>准确性</li>
+</ul>
+</li>
+<li><p><strong>自动控制系统的基本控制方式可以分为哪些</strong></p>
+<ul>
+<li>开环控制</li>
+<li>闭环控制</li>
+</ul>
+</li>
+<li><p><strong>线性定常离散控制系统的稳定性，除了与系统的结构参数有关之外，还与什么因素有关</strong></p>
+<ul>
+<li>采样周期</li>
+</ul>
+</li>
+<li><p><strong>根轨迹上的点应该同时满足什么条件</strong></p>
+<ul>
+<li>相角条件</li>
+<li>幅值条件</li>
+</ul>
+</li>
+<li><p><strong>根轨迹起始于什么，终止于什么</strong></p>
+<ul>
+<li><p>起始于开环极点</p>
+</li>
+<li><p>终止于开环零点</p>
+</li>
+</ul>
+</li>
+<li><p><strong>线性连续系统的稳态误差，除了与系统结构参数有关之外，还与什么有关</strong></p>
+<ul>
+<li>输入信号</li>
+</ul>
+</li>
+<li><p><strong>离散系统脉冲传递函数<code>G(z)</code>的定义是什么</strong></p>
+<ul>
+<li><p>是在零初始条件下，<code>C(z)</code>比上<code>R(z)</code></p>
+</li>
+<li><p>$G(z)=\frac{C(z)}{P(z)}$</p>
+</li>
+</ul>
+</li>
+<li><p><strong>连续系统稳定的充分必要条件是什么</strong></p>
+<ul>
+<li>所有的闭环特征根具有负实部</li>
+</ul>
+</li>
+<li><p><strong>在频率特性法中，采用什么来衡量系统的相对稳定性</strong></p>
+<ul>
+<li>幅值预料</li>
+<li>相角预料</li>
+</ul>
+</li>
+<li><p><strong>传递函数反映的是什么</strong></p>
+<ul>
+<li>单输入，单输出线性定常系统在零初始条件下的动态特性</li>
+</ul>
+</li>
+<li><p><strong>惯性环节在转折频率处的模值为，相角为</strong></p>
+<ul>
+<li><p>$模值为 \frac{\sqrt{2}}{2}$</p>
+</li>
+<li><p>$相角为 -45^{\circ}$</p>
+</li>
+</ul>
+</li>
+<li><p><strong>奈奎斯特稳定判据中，Z=P-2N，其中Z代表什么，P代表什么，N代表什么</strong></p>
+<ul>
+<li>Z：闭环特征根在X右半平面的个数</li>
+<li>P：开环极点在X右半平面的个数</li>
+<li>N：开环幅相曲线穿越-1之左实轴的次数</li>
+</ul>
+</li>
+<li><p><strong>稳定的线性定常系统在谐波输入下，输出的稳态分量仍然是与输入同频率的谐波函数，而幅值和相位的变化是频率ω的函数，请问频率特性的表达式怎么写，并说明频率特性、幅频特性和相频特性的定义</strong></p>
+<ul>
+<li><p>$幅频特性 A(w)=\vert G(j w)\vert$</p>
+</li>
+<li><p>$相频特性 A(w)=\angle G(J w)$</p>
+</li>
+<li><p>$频率特性 A(w) e^{j φ^{(\omega)}}=\vert G(j w)\vert e^{jG(j w)}=G(j w)=\left.G(s)\right\vert_{s=j w}$</p>
+</li>
+</ul>
+</li>
+<li><p><strong>简述频率特性的定义，并说明稳定的线性定常系统在谐波输入下输出响应与输入频率的关系</strong></p>
+<ul>
+<li>当线性系统的输入端加上一频率为ω的正弦信号时，系统的稳态输入是与输出同频率的正弦信号，其幅值和相位是频率ω的函数</li>
+<li>$或用公式表示 C_{s}(t)=A\vert G(j w)\vert \sin [w t+(G(j w)]$</li>
+</ul>
+</li>
+<li><p><strong>已知某二阶系统的闭环传递函数$\varphi(s)=\frac{4}{s^{2}+2 s+4}$，求谐振频率$\omega_{r}$和谐振峰值$M_{r}$</strong></p>
+<ul>
+<li><p>谐振频率 $\omega_{r}=\omega_{n} \sqrt{1-2 \xi^{2}} \qquad (0 \leq \xi \leq 0.707)$</p>
+</li>
+<li><p>谐振峰值 $M_{r}=\frac{1}{2 \xi \sqrt{1-\xi^{2}}}$</p>
+</li>
+</ul>
+</li>
+<li><p><strong>闭环系统$\varphi(s)=\frac{4}{s+2}$，如果输入信号为阶跃信号，求输出响应的调节时间</strong></p>
+</li>
+</ol>
+<ul>
+<li><p>一阶系统的调节时间为3T</p>
+</li>
+<li><p>T为将分母常数项化为一，S前面的参数，本题为$\frac{1}{2}$</p>
+</li>
+<li><p>调节时间为$\frac{3}{2}$</p>
+</li>
+</ul>
+<ol start="17">
+<li><p><strong>闭环系统$\varphi(s)=\frac{4}{s+2}$，如果输入信号为正弦信号$\sin (2 t)$，求稳态输出</strong></p>
+<ul>
+<li>套用公式 $C_{s}(t)=A\vert G(j w)\vert \sin [w t+(G(j w)]$</li>
+</ul>
+</li>
+<li><p><strong>已知某系统的开环传递函数$G(s)=\frac{5}{s(s+2)}$，问它的型别和开环增益</strong></p>
+<ul>
+<li>型别：开环传递函数分母在原点处的极点个数，本题中为1，因此是1型</li>
+<li>开环增益：去掉型别（s），常数项化为1，剩下的S取0，得到开环增益为$\frac{5}{2}$</li>
+</ul>
+</li>
+<li><p><strong>已知某单位反馈系统，误差传递函数为$\varphi_{e r}(s)=\frac{s+1}{s+2}$，当输入为$\sin (2 t)$时，求稳态误差</strong></p>
+<ul>
+<li>套用公式 $C_{s}(t)=A\vert G(j w)\vert \sin [w t+(G(j w)]$</li>
+</ul>
+</li>
+</ol>
+<h1 id="二、计算题"><a href="#二、计算题" class="headerlink" title="二、计算题"></a>二、计算题</h1><h2 id="1、（2-7）求系统的传递函数C-s-，E-s-。"><a href="#1、（2-7）求系统的传递函数C-s-，E-s-。" class="headerlink" title="1、（2-7）求系统的传递函数C(s)，E(s)。"></a>1、（2-7）求系统的传递函数C(s)，E(s)。</h2><p>![](/images/posts/zikong/2020-06-20 103108.png)</p>
+<blockquote>
+<p><strong>解：</strong></p>
+<p>(1)</p>
+<p>$L_{1}=-G_{1} G_{2} H_{3} $</p>
+<p>$L_{2}=G_{2} H_{2} $</p>
+<p>$R(s) \rightarrow C(s): P_{1}=G_{1} G_{2}, \Delta_{1}=1 $</p>
+<p>$\frac{C(S)}{R(S)}=\frac{G_{1} G_{2}}{1+G_{1} G_{2} H_{3}-G_{2} H_{2}}$</p>
+<p>$D(s) \rightarrow C(s): P_{1}=G_{2}, \Delta_{1}=1 ,P_{2}=-G_{1} G_{2}H_{1}, \Delta_{2}=1 $</p>
+<p>$\frac{C(s)}{D(s)}=\frac{G_{2}-G_{1} G_{2} H_{1}}{1+G_{1} G_{2} H_{3}-G_{2} H_{2}}$</p>
+<p>总输出为：</p>
+<p>$C(s)=\frac{G_{1} G_{2}}{1+G_{1} G_{2} H_{3}-G_{2} H_{2}} \cdot R(s)+\frac{G_{2}-G_{1} G_{2} H_{1}}{1+G_{1} G_{2} H_{3}-G_{2} H_{2}} \cdot D(s)$</p>
+<p>（2）<br>$R(s) \rightarrow E(s): P_{1}=1, \Delta_{1}=1-G_{2} H_{2} \<br>\frac{E(s)}{R(s)}=\frac{1-G_{2} H_{2}}{1+G_{1} G_{2} H_{3}-G_{2} H_{2}} $</p>
+<p>$D(s) \rightarrow E(s): P_{1}=-G_{2} H_{3}, \Delta_{1}=1, P_{2}=-H_{1}, \Delta_{2}=1-G_{2} H_{2} $</p>
+<p>$\frac{E(s)}{D(s)}=\frac{-G_{2} H_{3}-H_{1}\left(1-G_{2} H_{2}\right)}{1+G_{1} G_{2} H_{3}-G_{2} H_{2}}$</p>
+<p>总误差为：</p>
+<p>$E(s)=\frac{1-G_{2} H_{2}}{1+G_{1} G_{2} H_{3}-G_{2} H_{2}} \cdot R(s)+\frac{-G_{2} H_{3}-H_{1}\left(1-G_{2} H_{2}\right)}{1+G_{1} G_{2} H_{3}-G_{2} H_{2}} \cdot D(s)$</p>
+</blockquote>
+<h2 id="2、（2-8）试求图示系统中的-C-s"><a href="#2、（2-8）试求图示系统中的-C-s" class="headerlink" title="2、（2-8）试求图示系统中的 C(s)"></a>2、（2-8）试求图示系统中的 C(s)</h2><p>![](/images/posts/zikong/2020-06-20 104743.png)</p>
+<blockquote>
+<p>解：</p>
+<p>$L_{1}=-G_{1} H_{1}$</p>
+<p>$L_{2}=-G_{1} G_{2} G_{3} H_{1} H_{2} H_{3}$</p>
+<p>$L_{3}=G_{3} H_{3}$</p>
+<p>$L_{1} L_{3}=\left(-G_{1} H_{1}\right)\left(G_{3} H_{3}\right)$</p>
+<p>$R(s) \rightarrow C(s): P_{1}=G_{1} G_{2} G_{3}, \Delta_{1}=1; P_{2}=G_{14} G_{3}, \Delta_{1}=1-(-G_{1} H_{1})$</p>
+<p>$\frac{C(s)}{R(s)}=\frac{G_{1} G_{2} G_{3}+G_{4} G_{3}\left[1-\left(-G_{1} H_{1}\right)\right]}{1-\left(-G_{1} H_{1}\right)-\left(-G_{1} G_{2} G_{3} H_{1} H_{2} H_{3}\right)-\left(G_{3} H_{3}\right)-\left(-G_{1} H_{1}\right)\left(G_{3} H_{3}\right)}$</p>
+<p>$Y(s) \rightarrow C(s): P_{1}=G_{2} G_{3}, \Delta_{1}=1-(-G_{1} H_{1})$</p>
+<p>$\frac{C(s)}{Y(s)}=\frac{G_{2} G_{3}\left[1-\left(-G_{1} H_{1}\right)\right]}{1-\left(-G_{1} H_{1}\right)-\left(-G_{1} G_{2} G_{3} H_{1} H_{2} H_{3}\right)-\left(G_{3} H_{3}\right)-\left(-G_{1} H_{1}\right)\left(G_{3} H_{3}\right)}$</p>
+<p>总输出为：</p>
+<p>${C(s)}=\frac{G_{1} G_{2} G_{3}+G_{4} G_{3}\left(1+G_{1} H_{1}\right)}{1+G_{1}H_{1}+G_{1} G_{2} G_{3} H_{1} H_{2} H_{3}-G_{3} H_{3}+G_{1} G_{3} H_{1} H_{3}} \cdot R(s) \+ \frac{G_{2} G_{3}\left(1+G_{1} H_{1}\right)}{1+G_{1}H_{1}+G_{1} G_{2} G_{3} H_{1} H_{2} H_{3}-G_{3} H_{3}+G_{1} G_{3} H_{1} H_{3}} \cdot R(s)$</p>
+</blockquote>
+<h2 id="3、（7-9）设离散系统如图所示，其中-T-0-1s，K-1，求"><a href="#3、（7-9）设离散系统如图所示，其中-T-0-1s，K-1，求" class="headerlink" title="3、（7-9）设离散系统如图所示，其中 T=0.1s，K=1，求"></a>3、（7-9）设离散系统如图所示，其中 T=0.1s，K=1，求</h2><ol>
+<li>系统的闭环脉冲传递函数；</li>
+<li>判断系统的稳定性；</li>
+<li>系统在r(t)=t作用下的稳态误差$e^{*}(\infty)$；</li>
+</ol>
+<p>![](/images/posts/zikong/2020-06-20 105012.png)</p>
+<blockquote>
+<p>解：</p>
+<p>​    系统的开环脉冲传递函数为：<br>$G(z)=\left(1-z^{-1}\right) Z\left[\frac{1}{s^{2}(s+1)}\right]=\left(1-z^{-1}\right)\left[\frac{T z}{(z-1)^{2}}-\frac{\left(1-e^{-T}\right) z}{(z-1)\left(z-e^{-T}\right)}\right]$</p>
+<p>​    将T=0.1带入并整理得$G(z)=\frac{0.005(z+0.9)}{(z-1)(z-0.905)}$，</p>
+<p>$K_{p}=\lim _{x \rightarrow 1}[1+G(z)]=\lim _{x \rightarrow 1}\left[1+\frac{0.005(z+0.9)}{(z-1)(z-0.905)}\right]=\infty$</p>
+<p>$K_{v}=\lim _{z \rightarrow 1}(z-1) G(z)=\lim _{z \rightarrow 1}(z-1) \frac{0.005(z+0.9)}{(z-1)(z-0.905)}=0.1$</p>
+<p>$e(\infty)=\frac{T}{K_{v}}=1$</p>
+</blockquote>
+<h2 id="4、（7-8）设离散系统如图所示，采样周期T-1s，-G-h-s-为零阶保持器，而-G-s-frac-K-s-1-，求："><a href="#4、（7-8）设离散系统如图所示，采样周期T-1s，-G-h-s-为零阶保持器，而-G-s-frac-K-s-1-，求：" class="headerlink" title="4、（7-8）设离散系统如图所示，采样周期T=1s，$G_{h}(s)$为零阶保持器，而$G(s)=\frac{K}{s+1}$，求："></a>4、（7-8）设离散系统如图所示，采样周期T=1s，$G_{h}(s)$为零阶保持器，而$G(s)=\frac{K}{s+1}$，求：</h2><p>![](/images/posts/zikong/2020-06-20 160940.png)</p>
+<ol>
+<li>确定使系统稳定的K的范围</li>
+<li>设K=2，求系统在阶跃信号作用下的稳态误差</li>
+</ol>
+<blockquote>
+<p>解：</p>
+<p>思路：$G(z) \Rightarrow \phi(z) \Rightarrow D(z)=0 \quad \Rightarrow\left\vert z_{i}\right\vert &lt;1$</p>
+<p>（1）</p>
+</blockquote>
+<h2 id="5、（4-4）控制系统的开环传递函数为-G-s-frac-K-r-s-s-2-s-4-，求："><a href="#5、（4-4）控制系统的开环传递函数为-G-s-frac-K-r-s-s-2-s-4-，求：" class="headerlink" title="5、（4-4）控制系统的开环传递函数为$G(s)=\frac{K_{r}}{s(s+2)(s+4)}$，求："></a>5、（4-4）控制系统的开环传递函数为$G(s)=\frac{K_{r}}{s(s+2)(s+4)}$，求：</h2><ol>
+<li>绘制根轨迹图（写出5个步骤）<ol>
+<li>开环零、极点</li>
+<li>实轴上的根轨迹段</li>
+<li>根轨迹的渐近线、夹角</li>
+<li>分离点</li>
+<li>与虚轴的交点</li>
+</ol>
+</li>
+<li>判断系统临界稳定的$K_{r}$，并求等幅振荡的频率</li>
+</ol>
+<blockquote>
+<p>解：</p>
+<p>（1）</p>
+<p>开环零点、极点：$P_{1}=0，P_{1}=-2，P_{3}=-4，n=3$</p>
+<p>实轴上的根轨迹段：（0，-2）（-4，-$\infty$）</p>
+<p>渐近线交点及夹角：</p>
+<p>$\sigma_{a}=\frac{0-2-4}{3}=-2$</p>
+<p>$\varphi_{a}=\frac{\pm(2 k+1) \pi}{n-m}=\pm \frac{\pi}{3}=\pm 60^{\circ}, 180^{\circ}$</p>
+<p>分离点：</p>
+<p>$\frac{1}{d}+\frac{1}{d+2}+\frac{1}{d+4}=0$</p>
+<p>$\Rightarrow d_{1}=-0.845, d_{2}=-4.732(\text { 舍 })$</p>
+<p>与虚轴交点：</p>
+<p>$s^{3}+6 s^{2}+8 s+K_{r}=0$</p>
+<table>
+<thead>
+<tr>
+<th align="center">$s^{3}$</th>
+<th align="center">1</th>
+<th align="center">8</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">$s^{2}$</td>
+<td align="center">6</td>
+<td align="center">$K_{r}$</td>
+</tr>
+<tr>
+<td align="center">$s^{1}$</td>
+<td align="center">$48-K_{r}$</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">$s^{0}$</td>
+<td align="center">$K_{r}$</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p>$\mathbf{4 8}-\boldsymbol{K}_{r}=\mathbf{0}$</p>
+<p>$\Rightarrow \boldsymbol{K}_{r}=\mathbf{4 8}, \boldsymbol{s}=\pm \mathbf{j} \mathbf{2} \sqrt{\mathbf{2}}$</p>
+<p>（2）</p>
+<p>系统稳定的$K_{r}&lt;48$，等幅振荡频率为$\omega=2 \sqrt{2}$</p>
+</blockquote>
+<h2 id="6、-设-G-s-frac-K-r-s-2-2-s-4-，求："><a href="#6、-设-G-s-frac-K-r-s-2-2-s-4-，求：" class="headerlink" title="6、 设$G(s)=\frac{K_{r}}{(s+2)^{2}(s+4)}$，求："></a>6、 设$G(s)=\frac{K_{r}}{(s+2)^{2}(s+4)}$，求：</h2><ol>
+<li>绘制根轨迹图</li>
+<li>求系统出现阻尼振荡响应的开环增益的取值范围</li>
+</ol>
+<blockquote>
+<p>解：</p>
+<p>（1）</p>
+<p>开环零点、极点：$P_{1}=P_{2}=-2，P_{3}=-4$</p>
+<p>n=3，m=0</p>
+<p>n-m=3（3条渐近线）</p>
+<p>实轴上的根轨迹段：（-4，-$\infty$）</p>
+<p>渐近线交点及夹角：</p>
+<p>$\sigma_{a}=\frac{(-2)+(-2)+(-4)}{3}=-\frac{8}{3}$</p>
+<p>$ \varphi_{a}=\frac{\pm(2 k+1) \pi}{3}=\left{\begin{array}{l}<br>\frac{\pi}{3}(k=0) \<br>\pi \quad(k=1) \<br>\frac{5 \pi}{3}(k=2)<br>\end{array}\right. $</p>
+<p>分离点：</p>
+<p>$3S^2 + 16S + 20 = 0$</p>
+<p>$\Rightarrow d_{1}=-6.333, d_{2}=1(\text { 舍 })$</p>
+<p>此时对应的$K_{r}$值为 -43.8</p>
+<p>与虚轴的交点：</p>
+<p>特征方程 </p>
+<p>$(s+2)^{2}(s+4)+k_{r}=0$</p>
+<p>$\Rightarrow s^{3}+8 s^{2}+20 s+16 +k_{r}=0$</p>
+<table>
+<thead>
+<tr>
+<th align="center">$s^3$</th>
+<th align="center">1</th>
+<th align="center">20</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">$s^2$</td>
+<td align="center">8</td>
+<td align="center">$16+K_{r}$</td>
+</tr>
+<tr>
+<td align="center">$s^1$</td>
+<td align="center">$\frac{8 \times 20 - (16+K_{r})}{8}$</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">$s^0$</td>
+<td align="center">$16+K_{r}$</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p>$\frac{8 \times 20 - (16+K_{r})}{8}=0$</p>
+<p>$\Rightarrow  K_{r}=144$，带入$8s^2 + (16+K_{r}) = 0$ ，解得：</p>
+<p>$s=\pm j 2 \sqrt{5}$</p>
+<p>（2）</p>
+</blockquote>
+<h2 id="7、（5-12）单位反馈系统的开环传递函数为-G-s-frac-K-s-3-s-s-1-，试用奈奎斯特判据确定使闭环系统稳定的K值范围"><a href="#7、（5-12）单位反馈系统的开环传递函数为-G-s-frac-K-s-3-s-s-1-，试用奈奎斯特判据确定使闭环系统稳定的K值范围" class="headerlink" title="7、（5-12）单位反馈系统的开环传递函数为$G(s)=\frac{K (s+3)}{s(s-1)}$，试用奈奎斯特判据确定使闭环系统稳定的K值范围"></a>7、（5-12）单位反馈系统的开环传递函数为$G(s)=\frac{K (s+3)}{s(s-1)}$，试用奈奎斯特判据确定使闭环系统稳定的K值范围</h2><blockquote>
+<p>解：</p>
+<p>1、绘制图像曲线</p>
+<p>起点: $G(s) \approx \frac{3 k}{-s}, \quad \infty &lt; -270^{\circ}$ ; 终点:$ G(s) \approx \frac{k}{s}, 0 &lt; -90^{\circ}$ ;</p>
+<p>交点：分子分母同乘以(s+1),</p>
+<p>$G(s)=\frac{k\left(s^{2}+4 s+3\right)}{s\left(s^{2}-1\right)}$</p>
+<p>$G(j \omega)=\frac{k\left[\left(3-\omega^{2}\right)+j 4 \omega\right]}{-j \omega\left(\omega^{2}+1\right)}$</p>
+<p>$G(j \sqrt{3})=-k$</p>
+<p>![](/images/posts/zikong/2020-06-20 125139.png)</p>
+<p>2、求K值范围</p>
+<p>令 z=p-2N=1-2N=0，N 必须为 0.5，由图可见 k&gt;1 即可</p>
+</blockquote>
+<h2 id="8、（5-14）某最小相位系统的开环对数幅频特性如图所示，要求："><a href="#8、（5-14）某最小相位系统的开环对数幅频特性如图所示，要求：" class="headerlink" title="8、（5-14）某最小相位系统的开环对数幅频特性如图所示，要求："></a>8、（5-14）某最小相位系统的开环对数幅频特性如图所示，要求：</h2><p>![](/images/posts/zikong/2020-06-20 130244.png)</p>
+<ol>
+<li>写出系统的开环传递函数</li>
+<li>求截止频率及相位裕量$\gamma$</li>
+</ol>
+<blockquote>
+<p>解：</p>
+<p>（1）由图可得</p>
+<p>$G(s)=\frac{10}{s(10 s+1)(0.05 s+1)}$</p>
+<p>（2）由近似方法求截止频率：</p>
+<p>$G(s) \approx \frac{1}{s^{2}},$ 令 $\left\vert\frac{1}{s^{2}}\right\vert=1$ 得 $\omega_{c}=1$</p>
+<p>$\gamma=180^{\circ}-90^{\circ}-\operatorname{tg}^{-1} 10-\operatorname{tg}^{-1} 0.05=2.848^{\circ}$</p>
+</blockquote>
+<h2 id="9、二阶系统的结构框图如下，求"><a href="#9、二阶系统的结构框图如下，求" class="headerlink" title="9、二阶系统的结构框图如下，求"></a>9、二阶系统的结构框图如下，求</h2><p><img src="/images/posts/zikong/IMG_20200621_0001.jpg"></p>
+<ol>
+<li>输入信号 r(t) = 1(t) 时，若超调量为20%，调节时间为1.8，求参数$K_{1}，K_{2}$</li>
+<li>输入信号 r(t) = 2+t 时，求系统的稳态误差</li>
+</ol>
+<blockquote>
+<p>解：</p>
+<p>闭环传递函数：</p>
+</blockquote>
+<h2 id="10、系统结构如图所示，求："><a href="#10、系统结构如图所示，求：" class="headerlink" title="10、系统结构如图所示，求："></a>10、系统结构如图所示，求：</h2><ol>
+<li>用奈氏判据判断系统稳态</li>
+<li>当 K &lt; 4 时，求超调量及调节时间</li>
+<li>当输入信号为 2(1+t）时，若稳态误差为0.25，求K</li>
+</ol>
+<blockquote>
+<p>解：</p>
+<p>$G(s)=\frac{\frac{k_{1}}{s^{2}}}{1+\frac{k_{1}}{s^{2}} \cdot k_{2}s}=\frac{k_{1}}{s^{2}+k_{1} k_{2} s}$</p>
+<p>$\phi(s)=\frac{k_{1}}{s^{2}+k_{1} k_{2} s+k_{1}}$</p>
+<p>$\alpha %=e^{-\frac{\pi \xi}{\sqrt{1-\xi ^ 2}}} \times 100 %=20 %$</p>
+</blockquote>
+</div><div class="article-licensing box"><div class="licensing-title"><p>自动控制复习</p><p><a href="http://example.com/2020/06/16/2020-06-17-ziokng/">http://example.com/2020/06/16/2020-06-17-ziokng/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Aye10032</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2020-06-17</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2020-12-16</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a></div><div class="notification is-danger">You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.</div></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" href="/" target="_blank" rel="noopener" data-type="afdian"><span class="icon is-small"><i class="fas fa-charging-station"></i></span><span>爱发电</span></a><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="/" alt="支付宝"></span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="buymeacoffee"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>送我杯咖啡</span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="patreon"><span class="icon is-small"><i class="fab fa-patreon"></i></span><span>Patreon</span></a><div class="notification is-danger">You forgot to set the <code>business</code> or <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.</div><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="/" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2020/06/27/2020-06-28-IoT/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">工业物联网复习</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/06/13/2020-06-14-hca/"><span class="level-item">魔法纪录游戏音频解包随笔</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="Your name"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Your name</p><p class="is-size-6 is-block">Your title</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Your location</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">37</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">0</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">5</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/ppoffice"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-12-16T13:14:51.749Z">2020-12-16</time></p><p class="title"><a href="/2020/12/16/2018-06-06-idea/">idea旗舰版获取方式</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-11-14T16:00:00.000Z">2020-11-15</time></p><p class="title"><a href="/2020/11/14/2020-11-15-winterminal/">windows terminal + power shell调教手册</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-11-14T16:00:00.000Z">2020-11-15</time></p><p class="title"><a href="/2020/11/14/2020-12-07-mermaid/">mermaid常用公式</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-11-12T16:00:00.000Z">2020-11-13</time></p><p class="title"><a href="/2020/11/12/2020-11-13-zghuiyi/">中国共产党的会议</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-11-12T16:00:00.000Z">2020-11-13</time></p><p class="title"><a href="/2020/11/12/2020-11-13-xianfa/">近代史上的宪法</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2020/12/"><span class="level-start"><span class="level-item">十二月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/11/"><span class="level-start"><span class="level-item">十一月 2020</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/10/"><span class="level-start"><span class="level-item">十月 2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/08/"><span class="level-start"><span class="level-item">八月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/06/"><span class="level-start"><span class="level-item">六月 2020</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/12/"><span class="level-start"><span class="level-item">十二月 2019</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/11/"><span class="level-start"><span class="level-item">十一月 2019</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/10/"><span class="level-start"><span class="level-item">十月 2019</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/03/"><span class="level-start"><span class="level-item">三月 2019</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/01/"><span class="level-start"><span class="level-item">一月 2019</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/09/"><span class="level-start"><span class="level-item">九月 2018</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/08/"><span class="level-start"><span class="level-item">八月 2018</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/05/"><span class="level-start"><span class="level-item">五月 2018</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/02/"><span class="level-start"><span class="level-item">二月 2018</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/01/"><span class="level-start"><span class="level-item">一月 2018</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2017/12/"><span class="level-start"><span class="level-item">十二月 2017</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2017/10/"><span class="level-start"><span class="level-item">十月 2017</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/%E5%AD%A6%E4%B9%A0/"><span class="tag">学习</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%99%E7%A8%8B/"><span class="tag">教程</span><span class="tag">15</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%97%A5%E5%B8%B8/"><span class="tag">日常</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%97%A5%E5%BF%97/"><span class="tag">日志</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%80%83%E7%A0%94/"><span class="tag">考研</span><span class="tag">6</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="鸽子窝~" height="28"></a><p class="is-size-7"><span>&copy; 2020 Aye10032</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" async></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
