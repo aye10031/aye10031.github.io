@@ -11,6 +11,7 @@ cache:
     - node_modules # 缓存 node_modules 加快构建速度
 before_install: ## 根据你所用的主题和自定义的不同，这里会有所不同
   - npm install -g hexo-cli # 在 CI 环境内安装 Hexonpm install
+  - npm install hexo-deployer-git --save
 install:
  - npm install # 在根目录安装站点需要的依赖 
  - npm install -S hexo-theme-icarus
