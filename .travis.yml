@@ -1,5 +1,6 @@
 os: linux
 language: node_js 
+sudo: required
 node_js:
   - 12  # 使用 nodejs LTS v10
 branches:
@@ -8,13 +9,16 @@ branches:
 cache:
   directories:
     - node_modules # 缓存 node_modules 加快构建速度
-before_script: ## 根据你所用的主题和自定义的不同，这里会有所不同
+before_install: ## 根据你所用的主题和自定义的不同，这里会有所不同
   - npm install -g hexo-cli # 在 CI 环境内安装 Hexonpm install
-  - npm install # 在根目录安装站点需要的依赖 
-  - npm install -S hexo-theme-icarus
-  - ls
+install:
+ - npm install # 在根目录安装站点需要的依赖 
+ - npm install -S hexo-theme-icarus
+ - ls
 script: 
   - hexo generate # generate static files
+after_script:
+  - ls
 deploy: # 根据个人情况，这里会有所不同
   provider: pages
   cleanup: true # 构建完成后不清除
