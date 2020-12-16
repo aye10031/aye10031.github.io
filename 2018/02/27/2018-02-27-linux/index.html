@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Linux常用指令 - Hexo</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Hexo"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Hexo"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta description="概论Linux的发行版本可以大体分为两类，一类是商业公司维护的发行版本，一类是社区组织维护的发行版本 前者以著名的Redhat（RHEL）为代表，后者以Debian为代表。 Redhat，应该称为Redhat系列，包括RHEL(Redhat Enterprise Linux，也就是所谓的Redhat Advance Server，收费版本)、Fedora Core(由原来的Redhat桌面版本发展"><meta property="og:type" content="blog"><meta property="og:title" content="Linux常用指令"><meta property="og:url" content="http://example.com/2018/02/27/2018-02-27-linux/"><meta property="og:site_name" content="Hexo"><meta property="og:description" content="概论Linux的发行版本可以大体分为两类，一类是商业公司维护的发行版本，一类是社区组织维护的发行版本 前者以著名的Redhat（RHEL）为代表，后者以Debian为代表。 Redhat，应该称为Redhat系列，包括RHEL(Redhat Enterprise Linux，也就是所谓的Redhat Advance Server，收费版本)、Fedora Core(由原来的Redhat桌面版本发展"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://example.com/2018/02/27/2018-02-27-linux/%5Cimages%5Cposts%5Clinux%5Cjiegou.png"><meta property="og:image" content="http://example.com/2018/02/27/2018-02-27-linux/%5Cimages%5Cposts%5Clinux%5Cwenjianshuxing.png"><meta property="article:published_time" content="2018-02-27T00:00:00.000Z"><meta property="article:modified_time" content="2020-12-16T13:06:13.752Z"><meta property="article:author" content="John Doe"><meta property="article:tag" content="教程"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="%5Cimages%5Cposts%5Clinux%5Cjiegou.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2018/02/27/2018-02-27-linux/"},"headline":"Hexo","image":["http://example.com/2018/02/27/2018-02-27-linux/%5Cimages%5Cposts%5Clinux%5Cjiegou.png","http://example.com/2018/02/27/2018-02-27-linux/%5Cimages%5Cposts%5Clinux%5Cwenjianshuxing.png"],"datePublished":"2018-02-27T00:00:00.000Z","dateModified":"2020-12-16T13:06:13.752Z","author":{"@type":"Person","name":"John Doe"},"description":"概论Linux的发行版本可以大体分为两类，一类是商业公司维护的发行版本，一类是社区组织维护的发行版本 前者以著名的Redhat（RHEL）为代表，后者以Debian为代表。 Redhat，应该称为Redhat系列，包括RHEL(Redhat Enterprise Linux，也就是所谓的Redhat Advance Server，收费版本)、Fedora Core(由原来的Redhat桌面版本发展"}</script><link rel="canonical" href="http://example.com/2018/02/27/2018-02-27-linux/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.2.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2018-02-27T00:00:00.000Z" title="2018-02-27T00:00:00.000Z">2018-02-27</time></span><span class="level-item">Updated&nbsp;<time dateTime="2020-12-16T13:06:13.752Z" title="2020-12-16T13:06:13.752Z">2020-12-16</time></span><span class="level-item">38 minutes read (About 5665 words)</span></div></div><h1 class="title is-3 is-size-4-mobile">Linux常用指令</h1><div class="content"><h1 id="概论"><a href="#概论" class="headerlink" title="概论"></a>概论</h1><p>Linux的发行版本可以大体分为两类，一类是商业公司维护的发行版本，一类是社区组织维护的发行版本</p>
+<p>前者以著名的Redhat（RHEL）为代表，后者以Debian为代表。</p>
+<p><strong>Redhat</strong>，应该称为Redhat系列，包括RHEL(Redhat Enterprise Linux，也就是所谓的Redhat Advance Server，收费版本)、Fedora Core(由原来的Redhat桌面版本发展而来，免费版本)、CentOS(RHEL的社区克隆版本，免费)。Redhat应该说是在国内使用人群最多的Linux版本，甚至有人将Redhat等同于Linux，而有些老鸟更是只用这一个版本的Linux。所以这个版本的特点就是使用人群数量大，资料非常多，言下之意就是如果你有什么不明白的地方，很容易找到人来问，而且网上的一般Linux教程都是以Redhat为例来讲解的。Redhat系列的包管理方式采用的是基于RPM包的YUM包管理方式，包分发方式是编译好的二进制文件。稳定性方面RHEL和CentOS的稳定性非常好，适合于服务器使用，但是Fedora Core的稳定性较差，最好只用于桌面应用。</p>
+<p><strong>Debian</strong>，或者称Debian系列，包括Debian和Ubuntu等。Debian是社区类Linux的典范，是迄今为止最遵循GNU规范的Linux系统。Debian最早由Ian Murdock于1993年创建，分为三个版本分支（branch）： stable, testing 和 unstable。其中，unstable为最新的测试版本，其中包括最新的软件包，但是也有相对较多的bug，适合桌面用户。testing的版本都经 过unstable中的测试，相对较为稳定，也支持了不少新技术（比如SMP等）。而stable一般只用于服务器，上面的软件包大部分都比较过时，但是 稳定和安全性都非常的高。Debian最具特色的是apt-get / dpkg包管理方式，其实Redhat的YUM也是在模仿Debian的APT方式，但在二进制文件发行方式中，APT应该是最好的了。Debian的资料也很丰富，有很多支持的社区，有问题求教也有地方可去:)        </p>
+<p><strong>Arch Linux</strong> ，不同于以上两种，属于一种比较“硬核”的Linux系统，是一款基于x86-64架构的 Linux发行版。支持社区参与。系统设计以KISS原则（保持简单和愚蠢）为总体指导原则，注重代码正确、优雅和极简主义，期待用户能够愿意去理解系统的操作。 Arch Linux 系统安装、删除和更新软件的软件包管理器叫做 pacman 。</p>
+<p><del><strong>以上文字摘抄自网络，知道就行了。</strong></del></p>
+<h1 id="Linux目录文件结构"><a href="#Linux目录文件结构" class="headerlink" title="Linux目录文件结构"></a>Linux目录文件结构</h1><p><img src="%5Cimages%5Cposts%5Clinux%5Cjiegou.png" alt="jiegou"></p>
+<ul>
+<li>/：根目录，一般根目录下只存放目录，不要存放文件，/etc、/bin、/dev、/lib、/sbin应该和根目录放置在一个分区中</li>
+<li>/bin:/usr/bin:可执行二进制文件的目录，如常用的命令ls、tar、mv、cat等。</li>
+<li>/boot：放置linux系统启动时用到的一些文件。/boot/vmlinuz为linux的内核文件，以及/boot/gurb。建议单独分区，分区大小100M即可</li>
+<li>/dev：存放linux系统下的设备文件，访问该目录下某个文件，相当于访问某个设备，常用的是挂载光驱mount /dev/cdrom /mnt。</li>
+<li>/etc：系统配置文件存放的目录，不建议在此目录下存放可执行文件，重要的配置文件有/etc/inittab、/etc/fstab、/etc/init.d、/etc/X11、/etc/sysconfig、/etc/xinetd.d修改配置文件之前记得备份。<br>注：/etc/X11存放与x windows有关的设置。</li>
+<li>/home：系统默认的用户家目录，新增用户账号时，用户的家目录都存放在此目录下，<del>表示当前用户的家目录，</del>test表示用户test的家目录。建议单独分区，并设置较大的磁盘空间，方便用户存放数据</li>
+<li>/lib:/usr/lib:/usr/local/lib：系统使用的函数库的目录，程序在执行过程中，需要调用一些额外的参数时需要函数库的协助，比较重要的目录为/lib/modules。</li>
+<li>/lost+fount：系统异常产生错误时，会将一些遗失的片段放置于此目录下，通常这个目录会自动出现在装置目录下。如加载硬盘于/disk 中，此目录下就会自动产生目录/disk/lost+found</li>
+<li>/mnt:/media：光盘默认挂载点，通常光盘挂载于/mnt/cdrom下，也不一定，可以选择任意位置进行挂载。</li>
+<li>/opt：给主机额外安装软件所摆放的目录。如：FC4使用的Fedora 社群开发软件，如果想要自行安装新的KDE 桌面软件，可以将该软件安装在该目录下。以前的 Linux 系统中，习惯放置在 /usr/local 目录下</li>
+<li>/proc：此目录的数据都在内存中，如系统核心，外部设备，网络状态，由于数据都存放于内存中，所以不占用磁盘空间，比较重要的目录有/proc/cpuinfo、/proc/interrupts、/proc/dma、/proc/ioports、/proc/net/*等</li>
+<li>/root：系统管理员root的家目录，系统第一个启动的分区为/，所以最好将/root和/放置在一个分区下。</li>
+<li>/sbin:/usr/sbin:/usr/local/sbin：放置系统管理员使用的可执行命令，如fdisk、shutdown、mount等。与/bin不同的是，这几个目录是给系统管理员root使用的命令，一般用户只能”查看”而不能设置和使用。</li>
+<li>/tmp：一般用户或正在执行的程序临时存放文件的目录,任何人都可以访问,重要数据不可放置在此目录下</li>
+<li>/srv：服务启动之后需要访问的数据目录，如www服务需要访问的网页数据存放在/srv/www内</li>
+<li>/usr：应用程序存放目录，/usr/bin存放应用程序，/usr/share存放共享数据，/usr/lib存放不能直接运行的，却是许多程序运行所必需的一些函数库文件。/usr/local:存放软件升级包。/usr/share/doc:系统说明文件存放目录。/usr/share/man: 程序说明文件存放目录，使用 man ls时会查询/usr/share/man/man1/ls.1.gz的内容建议单独分区，设置较大的磁盘空间</li>
+<li>/var：放置系统执行过程中经常变化的文件，如随时更改的日志文件/var/log，/var/log/message：所有的登录文件存放目录，/var/spool/mail：邮件存放的目录，/var/run:程序或服务启动后，其PID存放在该目录下。建议单独分区，设置较大的磁盘空间      </li>
+</ul>
+<p>以上仍然摘自网络，大体了解各个目录的意义即可。</p>
+<h1 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h1><h2 id="文件-文件夹相关"><a href="#文件-文件夹相关" class="headerlink" title="文件/文件夹相关"></a>文件/文件夹相关</h2><ul>
+<li>ls: 列出目录</li>
+<li>cd：切换目录</li>
+<li>pwd：显示目前的目录</li>
+<li>mkdir：创建一个新的目录</li>
+<li>rmdir：删除一个空的目录</li>
+<li>cp: 复制文件或目录</li>
+<li>mv：移动文件或目录</li>
+<li>rm: 移除文件或目录</li>
+</ul>
+<h3 id="ls-列出目录"><a href="#ls-列出目录" class="headerlink" title="ls(列出目录)"></a>ls(列出目录)</h3><p><strong>语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls[参数](文件)</span><br></pre></td></tr></table></figure>
+<p><strong>选项</strong></p>
+<blockquote>
+<p>-a：显示所有档案及目录（ls默认将档案名或目录名称为“.”的视为隐藏，不会列出）；<br>-C：多列显示输出结果。这是默认选项；<br>-c：与“-lt”选项连用时，按照文件状态时间排序输出目录内容，排序的依据是文件的索引节点中的ctime字段。与“-l”选项连用时，则排序的一句是文件的状态改变时间；<br>-l：以长格式显示目录下的内容列表。输出的信息从左到右依次包括文件名，文件类型、权限模式、硬连接数、所有者、组、文件大小和文件的最后修改时间等；<br>–full-time：列出完整的日期与时间；<br>–color={never,auto,always}：是否使用不同的颜色高亮显示不同类型   </p>
+</blockquote>
+<p><strong>参数</strong></p>
+<p>目录：指定要显示列表的目录，也可以是具体的文件。</p>
+<p><strong>实例</strong></p>
+<p>显示根目录下的所有文件(含属性与隐藏档)：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@aye10032 ~]# ls -al</span><br></pre></td></tr></table></figure>
+
+<h3 id="cd-切换目录"><a href="#cd-切换目录" class="headerlink" title="cd (切换目录)"></a>cd (切换目录)</h3><p> <strong>语法</strong>      </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd (相对路径或绝对路径)</span><br></pre></td></tr></table></figure>
+<p> <strong>两种路径</strong></p>
+<p> 比如我们现在有这么一个test文件夹，它的路径是<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;root&#x2F;nhjckx&#x2F;aye10032&#x2F;test</span><br></pre></td></tr></table></figure></p>
+<p> 那么这个/root/nhjckx/aye10032/test就是该目录的绝对路径<br> 但是如果此时我已经在/root/nhjckx/aye10032目录下了，那么也可以用<code>cd ./test</code>来进入test目录。<br> 现在再假设我们在/root/nhjckx/aye10032目录下还有一个文件夹test01，那么同理，他的绝对路径就是<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;root&#x2F;nhjckx&#x2F;aye10032&#x2F;test01</span><br></pre></td></tr></table></figure><br> 此时如果我们在/root/nhjckx/aye10032目录下，同样可以用<code>cd ./test01</code>命令来进入test01这个目录。但是，如果我们此时所处的目录是/root/nhjckx/aye10032/test呢？此时我们有两种选择，一种是使用绝对路径，另外一种是使用相对路径：<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ..&#x2F;test01</span><br></pre></td></tr></table></figure><br> 同样也可以跳转到test01目录。</p>
+<blockquote>
+<p>总结：</p>
+<blockquote>
+<p>1.绝对路径必定由“/”开头<br>2.绝对路径是为档案/文件的所在位置做指向<br>3.在任何时候，都可以用绝对路径来找到我们想要的文件</p>
+</blockquote>
+<blockquote>
+<p>1.相对路径不由“/”开头<br>2.相对路径是相对于现在目前所在的位置，为目的地指向<br>3.相对路径只对当前所在目录有效,<code>./</code>代表当前路径，<code>../</code>代表上一层目录</p>
+</blockquote>
+</blockquote>
+<p> <strong>其他常用用法</strong></p>
+<blockquote>
+<p>cd    进入用户主目录；<br>cd ~  进入用户主目录；<br>cd -  返回进入此目录之前所在的目录；<br>cd ..  返回上级目录<br>cd ../..  返回上两级目录</p>
+</blockquote>
+<h3 id="pwd-显示目前所在的目录"><a href="#pwd-显示目前所在的目录" class="headerlink" title="pwd (显示目前所在的目录)"></a>pwd (显示目前所在的目录)</h3><p>这个指令没有什么好说的，就是显示当前目录的作用：        </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@aye10032 test]# pwd</span><br><span class="line">&#x2F;root&#x2F;test</span><br></pre></td></tr></table></figure>
+<h3 id="mkdir-创建新目录"><a href="#mkdir-创建新目录" class="headerlink" title="mkdir (创建新目录)"></a>mkdir (创建新目录)</h3><p><strong>语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir [参数](目录名称)</span><br></pre></td></tr></table></figure>
+
+<p><strong>参数</strong></p>
+<blockquote>
+<p>-m 建立目录的同时设置目录的权限；<br>-p 若所要建立目录的上层目录目前尚未建立，则会一并建立上层目录；</p>
+</blockquote>
+<ul>
+<li>关于权限的问题，我会放在后面再讲。</li>
+<li>当创建多个目录时，目录名之间使用空格隔开。</li>
+</ul>
+<p><strong>实例</strong><br>在目录/home下建立目录nhjckx和其下的子目录test，并且只有文件主有读、写和执行权限，其他人无权访问</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@aye10032 ~]# mkdir -m-p 700 &#x2F;home&#x2F;nhjckx&#x2F;test</span><br></pre></td></tr></table></figure>
+
+<h3 id="rmdir-删除空的目录"><a href="#rmdir-删除空的目录" class="headerlink" title="rmdir (删除空的目录)"></a>rmdir (删除空的目录)</h3><p><strong>语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rmdir [参数] (目录名称)</span><br></pre></td></tr></table></figure>
+<p><strong>参数</strong></p>
+<blockquote>
+<p>-p： 删除指定目录后，若该目录的上层目录已变成空目录，则将其一并删除；<br>-v： 显示命令的详细执行过程；</p>
+</blockquote>
+<ul>
+<li>当删除多个空目录时，目录名之间使用空格隔开。</li>
+</ul>
+<p><strong>实例</strong><br>删除子目录test和其父目录nhjckx</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@aye10032 ~]# cd &#x2F;home    </span><br><span class="line">[root@aye10032 home]# rmdir -p nhjckx&#x2F;test</span><br></pre></td></tr></table></figure>
+
+<h3 id="cp-复制文件或目录"><a href="#cp-复制文件或目录" class="headerlink" title="cp (复制文件或目录)"></a>cp (复制文件或目录)</h3><p><strong>语法</strong>      </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cp [参数] (source) (destination)      </span><br><span class="line">cp [参数] source1 source2 source3 .... directory</span><br></pre></td></tr></table></figure>
+<p><strong>参数</strong></p>
+<blockquote>
+<p>-d：当复制符号连接时，把目标文件或目录也建立为符号连接，并指向与源文件或目录连接的原始文件或目录；<br>-f：强行复制文件或目录，不论目标文件或目录是否已存在；<br>-i：覆盖既有文件之前先询问用户；<br>-l：对源文件建立硬连接，而非复制文件；<br>-p：保留源文件或目录的属性；<br>-R/r：递归处理，将指定目录下的所有文件与子目录一并处理；<br>-s：对源文件建立符号连接，而非复制文件；<br>-u：使用这项参数后只会在源文件的更改时间较目标文件更新时或是名称相互对应的目标文件并不存在时，才复制文件；<br>-S：在备份文件时，用指定的后缀“SUFFIX”代替文件的默认后缀；<br>-b：覆盖已存在的文件目标前将目标文件备份；<br>-v：详细显示命令执行的操作。       </p>
+</blockquote>
+<p><strong>实例</strong><br>将<code>/home/test</code>下名为test的文本文档复制到<code>/home/nhjckx</code>目录下并重命名为test01：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@aye10032 ~]# cp &#x2F;home&#x2F;test&#x2F;test.txt &#x2F;home&#x2F;hnjckx&#x2F;test01.txt</span><br></pre></td></tr></table></figure>
+<p><strong>注意，cp指令并不能新建文件夹，所以复制到的目标文件夹必须存在。同时，如果进行操作的文件或文件夹没有<em>权限</em>，则也会报错</strong></p>
+<h3 id="mv-移动文件与目录，或修改名称"><a href="#mv-移动文件与目录，或修改名称" class="headerlink" title="mv (移动文件与目录，或修改名称)"></a>mv (移动文件与目录，或修改名称)</h3><p><strong>语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mv [参数] (source) (destination)</span><br><span class="line">mv [参数] source1 source2 source3 .... directory</span><br></pre></td></tr></table></figure>
+
+<p><strong>参数</strong>        </p>
+<blockquote>
+<p>-f ：如果目标文件已经存在，不会询问而直接覆盖；<br>-i ：若目标文件 (destination) 已经存在时，会询问是否覆盖;<br>-u ：若目标文件已经存在，且 source 比较新，才会升级 (update);</p>
+</blockquote>
+<p><strong>实例</strong><br>将<code>/home/test</code>目录下的所有文件(用*表示)移动到当前目录下(用.表示)：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@aye10032 ~]# cp &#x2F;home&#x2F;test&#x2F;* .</span><br></pre></td></tr></table></figure>
+
+<h3 id="rm-移除文件或目录"><a href="#rm-移除文件或目录" class="headerlink" title="rm (移除文件或目录)"></a>rm (移除文件或目录)</h3><p><strong>语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm [参数](文件或目录)</span><br></pre></td></tr></table></figure>
+
+<p><strong>参数</strong>        </p>
+<blockquote>
+<p>-f ：删除时忽略不存在的文件，不会出现警告信息；<br>-i ：互动模式，在删除前会询问使用者是否动作；<br>-r ：递归删除；</p>
+</blockquote>
+<p><strong>实例</strong></p>
+<p>删除<code>/home/test</code>下名为test的文本文档：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@aye10032 ~]# rm -i &#x2F;home&#x2F;test&#x2F;test.txt</span><br><span class="line">rm: remove regular file &#96;test.txt&#39;? y</span><br></pre></td></tr></table></figure>
+
+<p>删除整个test目录：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@aye10032 ~]# rm -rf &#x2F;home&#x2F;test</span><br></pre></td></tr></table></figure>
+
+<p>数据无价，删除请谨慎！<br><br><br><br><br></p>
+<h2 id="文件属性相关"><a href="#文件属性相关" class="headerlink" title="文件属性相关"></a>文件属性相关</h2><blockquote>
+<h4 id="文件属性"><a href="#文件属性" class="headerlink" title="文件属性"></a>文件属性</h4><p>Linux系统是一种典型的多用户系统。不同的用户处于不同的地位，拥有不同的权限，Linux系统对不同的用户访问同一文件（包括目录文件）的权限做了不同的规定。</p>
+<p>在Linux中我们可以使用ls –l命令来显示一个文件的属性以及文件所属的用户和组，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@aye10032 aye10032]# ls -l     </span><br><span class="line">total 29544</span><br><span class="line">-rw-r--r--. 1 root root        2 Feb 26 19:23 banned-ips.json		</span><br><span class="line">-rw-r--r--. 1 root root        2 Feb 26 19:23 banned-players.json		</span><br><span class="line">-rw-r--r--. 1 root root      180 Feb 23 08:47 eula.txt		</span><br><span class="line">drwxr-xr-x. 2 root root      213 Feb 26 19:23 logs		</span><br><span class="line">-rw-r--r--. 1 root root 30222121 Feb 23 08:42 minecraft_server.1.12.2.jar		</span><br><span class="line">-rw-r--r--. 1 root root        2 Feb 26 19:23 ops.json		</span><br><span class="line">-rw-r--r--. 1 root root      753 Feb 26 19:23 server.properties		</span><br><span class="line">-rw-r--r--. 1 root root        2 Feb 26 19:23 usercache.json		</span><br><span class="line">-rw-r--r--. 1 root root        2 Feb 23 08:47 whitelist.json		</span><br><span class="line">drwxr-xr-x. 7 root root      133 Feb 26 19:24 world		</span><br></pre></td></tr></table></figure>
+<p>我们就以以上我自己的一个文件夹为例来谈一谈，输出的信息从左到右依次包括文件属性、文件硬连接数、所有者、组、文件大小、文件的最后修改时间和文件名，其他的都比较好理解，这里就特别讲一下表示文件属性的三个三元组。<br><img src="%5Cimages%5Cposts%5Clinux%5Cwenjianshuxing.png" alt="wenjian"><br>这里一共有十个字符，分为四组，其中第一个字符代表这个文件是目录、文件或链接文件等等。</p>
+<ul>
+<li>当为[ d ]则是目录</li>
+<li>当为[ - ]则是文件；</li>
+<li>若是[ l ]则表示为链接文档(link file)；</li>
+<li>若是[ b ]则表示为装置文件里面的可供储存的接口设备(可随机存取装置)；</li>
+<li>若是[ c ]则表示为装置文件里面的串行端口设备，例如键盘、鼠标(一次性读取装置)。</li>
+</ul>
+<p>接下来的字符中，以三个为一组，且均为[ rwx ] 的三个参数的组合。其中，[ r ]代表可读(read)、[ w ]代表可写(write)、[ x ]代表可执行(execute)。这三个三元字符组中第一个三元字符组代表文件所有者的权限，第二个代表文件的组的权限，第三个代表所有其他用户的权限。每个字符组都是按照[rwx]的顺序排列，如果该权限组有此权限，则输出相应的字母，如果没有，则输出”-“。<br>比如如下信息：        </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drwxr-xr-x. 7 root root      133 Feb 26 19:24 world</span><br></pre></td></tr></table></figure>
+<p>表现的意思就是有一个名为”world”的目录(第一位是d，表示目录)，它对于所有者、也就是建立这个文件夹的用户，拥有读写以及可执行权限(rwx三个字母都有)；对于和所有者处于同一<strong>组</strong>的用户，拥有可读和执行权限，但是没有写入权限；对于其他用户，也是拥有除了写入权限的其他两个权限。在看懂这些之后，我们就可以继续接下来的学习了。       </p>
+</blockquote>
+<h3 id="chgrp-更改文件属组"><a href="#chgrp-更改文件属组" class="headerlink" title="chgrp(更改文件属组)"></a>chgrp(更改文件属组)</h3><p><strong>语法</strong>        </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chgrp [参数] (属组名)(文件名)</span><br></pre></td></tr></table></figure>
+
+<p><strong>参数</strong></p>
+<blockquote>
+<p>-R：递归更改文件属组</p>
+</blockquote>
+<p><strong>实例</strong><br>将<code>/home/test</code>及其子目录下的所有文件的用户组改为mrquin：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@aye10032 ~]# chgrp -R mrquin &#x2F;home&#x2F;test</span><br></pre></td></tr></table></figure>
+
+<h3 id="chown-更改文件属主或同时更改文件属组"><a href="#chown-更改文件属主或同时更改文件属组" class="headerlink" title="chown(更改文件属主或同时更改文件属组)"></a>chown(更改文件属主或同时更改文件属组)</h3><p><strong>语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chown [参数] (属主名)(文件名)</span><br><span class="line">chown [参数] (属主名:属组名)(文件名)</span><br></pre></td></tr></table></figure>
+
+<p><strong>参数</strong>        </p>
+<blockquote>
+<p>-R：递归更改文件属主</p>
+</blockquote>
+<p><strong>实例</strong><br>将<code>/home/test</code>及其子目录下的所有文件的拥有者改为ywwuyi：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@aye10032 ~]# chown -R ywwuyi &#x2F;home&#x2F;test</span><br></pre></td></tr></table></figure>
+<p>再将其所有者和用户组改回为mrquin：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@aye10032 ~]# chown -R mrquin:mrquin &#x2F;home&#x2F;test</span><br></pre></td></tr></table></figure>
+
+<h3 id="chmod-更改文件9个属性"><a href="#chmod-更改文件9个属性" class="headerlink" title="chmod(更改文件9个属性)"></a>chmod(更改文件9个属性)</h3><p><strong>语法</strong>        </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod [参数] (属性) (文件或目录)</span><br></pre></td></tr></table></figure>
+
+<p> <strong>属性：</strong></p>
+<blockquote>
+<p>Linux文件属性有两种设置方法，一种是数字，一种是符号。<br>Linux文件的基本权限就有九个，分别是[owner/group/others]三种身份,各有自己的[read/write/execute]权限。<br>文件的权限字符为：『-rwxrwxrwx』,其中，我们可以使用数字来代表各个权限，各权限的分数对照表如下：</p>
+<ul>
+<li>r : 4</li>
+<li>w : 2</li>
+<li>x : 1</li>
+</ul>
+<p>每种身份(owner/group/others)各自的三个权限(r/w/x)分数是需要累加的，例如当权限为： [-rwxrwx—] 分数就是：     </p>
+<ul>
+<li>owner = rwx = 4+2+1 = 7</li>
+<li>group = rwx = 4+2+1 = 7</li>
+<li>others= — = 0+0+0 = 0<br>这样我们就可以得出文件权限的数字表示了</li>
+</ul>
+</blockquote>
+<p>除了使用数字表达之外，我们也可以使用字符来对用户文件进行操作。我们前面已经将讲过，在代表文件的9个字母中分别代表：用户(user)；组(group)和其他用户(others) 的权限，则我们就可以用u，g，o这三个字母来表示三种身份的权限。具体使用时的语法为<code>chmod (u=rwx,g=rx,o=r) [文件名]</code>类似的语法。</p>
+<p><strong>实例</strong><br>将<code>/home/test/test.txt</code>文件权限设置为<code>rwxrwxrwx</code>(两种写法)：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@aye10032 ~]chmod 777 &#x2F;home&#x2F;test&#x2F;test.txt</span><br><span class="line">[root@aye10032 ~]chmod u&#x3D;rwx,g&#x3D;rwx,o&#x3D;rwx &#x2F;home&#x2F;test&#x2F;test.txt</span><br></pre></td></tr></table></figure>
+<p>将上面文件的可执行权限(x)撤销：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@aye10032 ~]chmod a-x &#x2F;home&#x2F;test&#x2F;test.txt</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="用户和用户组相关"><a href="#用户和用户组相关" class="headerlink" title="用户和用户组相关"></a>用户和用户组相关</h2><p>上文我们讲到了文件的属性当中多次提到了<strong>用户</strong>和<strong>组</strong>这两个概念。对于大部分平常惯用Windows系统的同学们而言，这个概念可能会一时摸不着头脑。这里就先简单提一下Linux系统</p>
+<blockquote>
+<p>TIPS:</p>
+<p>Linux系统是一个多用户多任务的分时操作系统，任何一个要使用系统资源的用户，都必须首先向系统管理员申请一个账号，然后以这个账号的身份进入系统。</p>
+<p>用户的账号一方面可以帮助系统管理员对使用系统的用户进行跟踪，并控制他们对系统资源的访问；另一方面也可以帮助用户组织文件，并为用户提供安全性保护。</p>
+<p>每个用户账号都拥有一个惟一的用户名和各自的口令。</p>
+<p>用户在登录时键入正确的用户名和口令后，就能够进入系统和自己的主目录。</p>
+</blockquote>
+<h3 id="useradd-添加用户"><a href="#useradd-添加用户" class="headerlink" title="useradd(添加用户)"></a>useradd(添加用户)</h3><p><strong>语法：</strong>        </p>
+<p><code>useradd [参数] (用户名称)</code></p>
+<p><strong>参数</strong>        </p>
+<blockquote>
+<ul>
+<li>-c 指定一段注释性描述</li>
+<li>-d 指定用户主目录，如果此目录不存在，则同时使用-m选项，可以创建主目录</li>
+<li>-g 指定用户所属的用户组</li>
+</ul>
+</blockquote>
+<p><strong>实例：</strong>        </p>
+<p>新建用户mrquin，该用户属于用户组mole，同时生成同名的用户主文件夹。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@aye10032 ~]useradd -g mole –d &#x2F;usr&#x2F;mrquin -m mrquin</span><br></pre></td></tr></table></figure>
+
+<h3 id="userdel-删除用户"><a href="#userdel-删除用户" class="headerlink" title="userdel(删除用户)"></a>userdel(删除用户)</h3><p><strong>语法：</strong>        </p>
+<p><code>userdel [参数] (用户名称)</code></p>
+<p><strong>参数：</strong></p>
+<blockquote>
+<ul>
+<li>-r 将用户和他的主目录一起删除</li>
+</ul>
+</blockquote>
+<p><strong>实例：</strong></p>
+<p>将用户mrquin连同主目录一起删除：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@aye10032 ~]userdel -r mrquin</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="usermod-修改用户属性"><a href="#usermod-修改用户属性" class="headerlink" title="usermod(修改用户属性)"></a>usermod(修改用户属性)</h3><p><strong>语法：</strong>        </p>
+<p><code>usermod [参数] (用户名称)</code></p>
+<p><strong>参数：</strong>        </p>
+<p>此处的参数与<code>useradd</code>指令的参数完全一致，不再描述。</p>
+<p><strong>实例：</strong>        </p>
+<p>将用户mrquin的所属用户组改为rua：        </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@aye10032 ~]usermod -g rua mrquin</span><br></pre></td></tr></table></figure>
+
+<h3 id="groupadd-新建用户组"><a href="#groupadd-新建用户组" class="headerlink" title="groupadd(新建用户组)"></a>groupadd(新建用户组)</h3><p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">groupadd [参数] (用户组名称)</span><br></pre></td></tr></table></figure>
+
+<p>参数：</p>
+<blockquote>
+<ul>
+<li>-g GID 指定新用户组的组识别号</li>
+<li>-o 新用户组的GID可以与已有用户组相同（一般与-g同时使用）</li>
+</ul>
+</blockquote>
+<p>实例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@aye10032 ~]groupadd -g-o 144 mrquin</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="常用软件"><a href="#常用软件" class="headerlink" title="常用软件"></a>常用软件</h1><p> 对于Linux系统来说，有一些常用软件我这里也推荐一下：</p>
+<h2 id="文本编辑器"><a href="#文本编辑器" class="headerlink" title="文本编辑器"></a>文本编辑器</h2><h3 id="VIM"><a href="#VIM" class="headerlink" title="VIM"></a>VIM</h3><p>vim是一款轻量化但是功能强大的文本编辑器，这里只讲一些基础的操作。一般来说，当你装了一个新的Linux系统，他可能没有安装nano，甚至可能没有安装vim，但是肯定可以使用vi指令。</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>Linux常用指令</p><p><a href="http://example.com/2018/02/27/2018-02-27-linux/">http://example.com/2018/02/27/2018-02-27-linux/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>John Doe</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2018-02-27</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2020-12-16</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E6%95%99%E7%A8%8B/">教程</a></div><div class="notification is-danger">You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.</div></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">Like this article? Support the author with</h3><div class="buttons is-centered"><a class="button donate" href="/" target="_blank" rel="noopener" data-type="afdian"><span class="icon is-small"><i class="fas fa-charging-station"></i></span><span>Afdian.net</span></a><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>Alipay</span><span class="qrcode"><img src="/" alt="Alipay"></span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="buymeacoffee"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>Buy me a coffee</span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="patreon"><span class="icon is-small"><i class="fab fa-patreon"></i></span><span>Patreon</span></a><div class="notification is-danger">You forgot to set the <code>business</code> or <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.</div><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>Wechat</span><span class="qrcode"><img src="/" alt="Wechat"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2018/05/20/2018-05-20-none/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">无题</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2018/01/20/2018-01-20-markdown/"><span class="level-item">Markdown闲谈</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">Comments</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="Your name"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Your name</p><p class="is-size-6 is-block">Your title</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Your location</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">37</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">0</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">5</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/ppoffice"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-12-16T13:06:13.752Z">2020-12-16</time></p><p class="title"><a href="/2020/12/16/2018-06-06-idea/">idea旗舰版获取方式</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-11-15T00:00:00.000Z">2020-11-15</time></p><p class="title"><a href="/2020/11/15/2020-11-15-winterminal/">windows terminal + power shell调教手册</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-11-15T00:00:00.000Z">2020-11-15</time></p><p class="title"><a href="/2020/11/15/2020-12-07-mermaid/">mermaid常用公式</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-11-13T00:00:00.000Z">2020-11-13</time></p><p class="title"><a href="/2020/11/13/2020-11-13-zghuiyi/">中国共产党的会议</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-11-13T00:00:00.000Z">2020-11-13</time></p><p class="title"><a href="/2020/11/13/2020-11-13-xianfa/">近代史上的宪法</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2020/12/"><span class="level-start"><span class="level-item">December 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/11/"><span class="level-start"><span class="level-item">November 2020</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/10/"><span class="level-start"><span class="level-item">October 2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/08/"><span class="level-start"><span class="level-item">August 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/06/"><span class="level-start"><span class="level-item">June 2020</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/12/"><span class="level-start"><span class="level-item">December 2019</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/11/"><span class="level-start"><span class="level-item">November 2019</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/10/"><span class="level-start"><span class="level-item">October 2019</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/03/"><span class="level-start"><span class="level-item">March 2019</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/01/"><span class="level-start"><span class="level-item">January 2019</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/09/"><span class="level-start"><span class="level-item">September 2018</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/08/"><span class="level-start"><span class="level-item">August 2018</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/05/"><span class="level-start"><span class="level-item">May 2018</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/02/"><span class="level-start"><span class="level-item">February 2018</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/01/"><span class="level-start"><span class="level-item">January 2018</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2017/12/"><span class="level-start"><span class="level-item">December 2017</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2017/10/"><span class="level-start"><span class="level-item">October 2017</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/%E5%AD%A6%E4%B9%A0/"><span class="tag">学习</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%99%E7%A8%8B/"><span class="tag">教程</span><span class="tag">15</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%97%A5%E5%B8%B8/"><span class="tag">日常</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%97%A5%E5%BF%97/"><span class="tag">日志</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%80%83%E7%A0%94/"><span class="tag">考研</span><span class="tag">6</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a><p class="is-size-7"><span>&copy; 2020 John Doe</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" async></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
