@@ -1,8 +1,7 @@
 os: linux
 language: node_js 
-sudo: required
 node_js:
-  - 12  # 使用 nodejs LTS v10
+  - 10  # 使用 nodejs LTS v10
 branches:
   only:
     - source # 只监控 source 的 branch
@@ -15,7 +14,6 @@ before_install: ## 根据你所用的主题和自定义的不同，这里会有�
 install:
  - npm install # 在根目录安装站点需要的依赖 
  - npm install -S hexo-theme-icarus
- - ls
 script:
   - hexo clean
   - hexo generate # generate static files
