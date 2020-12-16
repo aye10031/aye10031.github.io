@@ -12,7 +12,7 @@ before_script: ## 根据你所用的主题和自定义的不同，这里会有�
   - npm install -g hexo-cli # 在 CI 环境内安装 Hexonpm install
   - npm install # 在根目录安装站点需要的依赖 
   - npm install -S hexo-theme-icarus
-  - ls -la
+  - ls
 script: 
   - hexo generate # generate static files
 deploy: # 根据个人情况，这里会有所不同
